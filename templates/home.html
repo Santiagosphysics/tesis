@@ -2,28 +2,8 @@
 
 {% block content %}
 <div class="jumbotron">
-    <h1 class="display-4">AUTOMATIC CALIFICATION</h1>
-    <form method="POST" action="{{ url_for('home')}}" > 
-        <div class="form-group">
-            <label for="numQuestions">Number of questions:</label>
-            <input type="number" class="form-control" id="numQuestions" name="numQuestions">
-        </div>
-        <div class="form-group">
-            <label for="numOptions">Number of options:</label>
-            <input type="number" class="form-control" id="numOptions" name="numOptions">            
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    {% if df_html%}
-    <div>
-        <h2> Generated Dataframe: </h2>
-        {{ df_html | safe }}
-    </div>
-    <a href="{{ url_for('take')}}" class="btn btn-primary"> Continue</a>
-
-
-    {% endif %}
-
-
+    <h1 class="display-5">AUTOMATIC GRADER FOR MULTIPLE CHOICE EXAMS</h1>
+    <a href="{{ url_for('dev_df') }}" class="btn btn-primary">Build questionary</a>
+    <!-- <a href="{{ url_for('take') }}" class="btn btn-primary">Grade exam</a> -->
 </div>
 {% endblock %}

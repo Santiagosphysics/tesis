@@ -1,0 +1,25 @@
+<!-- prediction_result.html -->
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Prediction Result</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Uploaded Image:</h2>
+            <!-- En la plantilla prediction_result.html -->
+            <!-- <img src="{{ url_for('static', filename=image_path) }}" class="img-fluid" alt="Uploaded Image"> -->
+            <img src="{{ url_for('static', filename=image_path) }}" class="img-fluid" alt="Uploaded Image">
+            <!-- <img src="{{ url_for('static', filename='uploads/image_test_9.jpg') }}" class="img-fluid" alt="Uploaded Image"> -->
+
+
+        </div>
+        <div class="col-md-6">
+            <!-- Aquí podrías agregar más contenido relacionado con la predicción -->
+        </div>
+    </div>
+    <div class="mt-4">
+        <a href="{{ url_for('prediction') }}" class="btn btn-primary">Upload Another Image</a>
+    </div>
+</div>
+{% endblock %}
